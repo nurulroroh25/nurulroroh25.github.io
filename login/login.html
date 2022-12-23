@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Contact Form PHP</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="contact" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <?php if(!empty($notify)){ ?>
+        <p class="notify <?php echo !empty($notifyClass)?$notifyClass:''; ?>"><?php echo $notify; ?></p>
+        <?php } ?>
+        <center>
+          <h3>Login Form</h3>
+        </center>
+        <fieldset>
+          <input placeholder="Email Anda" type="text" name="email" tabindex="1" required autofocus />
+        </fieldset>
+        <fieldset>
+          <input placeholder="Password Anda" type="password" name="password" tabindex="2" required />
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Mengirim pesan">Kirim</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
